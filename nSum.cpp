@@ -21,16 +21,6 @@ int nSum(int n) {
   return sums[n];
 }
 
-int naive_nSum(int n) {
-  int total = 0;
-
-  for (int i = 0; i <= n; i++) {
-    total += i;
-  }
-
-  return total;
-}
-
 int main() {
   int number;
   while (1) {
