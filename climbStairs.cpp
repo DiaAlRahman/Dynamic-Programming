@@ -27,13 +27,20 @@ Framework of DP:
 #include <iostream>
 
 long climbStairs(int n) {
-  long dp[n + 1] = {0, 1, 2, 3};
-
-  for (int i = 4; i <= n; i++) {
-    dp[i] = dp[i - 1] + dp[i - 2];
+  if (n <= 3) {
+    return n;
   }
 
-  return dp[n];
+  long dp[2] = {2, 3};
+  long buffer;
+
+  for (int i = 4; i <= n; i++) {
+    buffer = dp[1];
+    dp[1] = dp[1] + dp[0];
+    dp[0] = buffer;
+  }
+
+  return dp[1];
 }
 
 int main() {
