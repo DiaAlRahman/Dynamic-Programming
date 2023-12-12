@@ -24,6 +24,8 @@ Framework of DP:
         f(n)
 */
 
+// Use the mod operator to rewrite memory by cycling through the array - learn more
+
 #include <iostream>
 
 long climbStairs(int n, int k) {
