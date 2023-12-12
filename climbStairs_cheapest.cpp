@@ -23,7 +23,8 @@ the minimum cost to reach the top of the floor.
     4. What's the order of execution?
         bottom-up, could be top-down
     5. Where to look for the answer?
-        minimum point of f(n)*/
+        minimum point of f(n)
+*/
 
 #include <iostream>
 
@@ -37,12 +38,18 @@ int minCost(int n, int p[]) {
     dp[0] = buffer;
     }
 
-    return dp[1];
+    if (n != 0)
+        return dp[1];
+    else
+        return 0;
 }
 
 int main() {
-    int cost[5] = {10, 15, 20, 25, 30};
-    int nSteps = 5;
+    int cost[10] = {10, 15, 20, 25, 30, 40, 50, 60, 70, 80};
+    int nSteps;
+
+    std::cout << "Enter the number of steps: ";
+    std::cin >> nSteps;
     std::cout << "The cheapest cost to travel to the top is: "
                 << minCost(nSteps, cost) << std::endl;
 
