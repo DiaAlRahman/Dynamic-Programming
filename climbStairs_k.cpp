@@ -27,7 +27,7 @@ Framework of DP:
 #include <iostream>
 
 long climbStairs(int n, int k) {
-  if (n <= 2) {
+  if (n <= 1) {
     return n;
   }
 
